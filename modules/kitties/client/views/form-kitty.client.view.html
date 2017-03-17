@@ -1,0 +1,32 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.kitty._id ? 'Edit Kitty' : 'New Kitty'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.kittyForm" class="form-horizontal" ng-submit="vm.save(vm.form.kittyForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+
+          <label class="control-label" for="name0">Name</label>
+          <input name="name0" type="text" ng-model="vm.kitty.name0" id="name0" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.kittyForm.name0.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Kitty name is required.</p>
+          </div>
+
+          <label class="control-label" for="name1">Kitty</label>
+          <input name="name1" type="text" ng-model="vm.kitty.name1" id="name1" class="form-control" placeholder="Kitty" required>
+          <div ng-messages="vm.form.kittyForm.name1.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Kitty surname is required.</p>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.kitty._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
