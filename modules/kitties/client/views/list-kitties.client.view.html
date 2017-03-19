@@ -13,8 +13,11 @@
         <span ng-if="kitty.user" ng-bind="kitty.user.displayName"></span>
         <span ng-if="!kitty.user">Deleted User</span>
       </small>
+      <hr>
       <h4 class="list-group-item-heading" ng-bind="kitty.name0"></h4>
-      <h3 class="list-group-item-heading" ng-bind="kitty.name1"></h4>
+      <span ng-bind="(kitty.name1)"></span>
+      <span class="text-info"> {{kitty.catagory}} </span>
+      <p>Tags: <strong><span ng-bind="kitty.tag"></span><strong></p>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.kitties.$resolved && !vm.kitties.length">

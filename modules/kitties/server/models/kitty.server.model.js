@@ -22,6 +22,17 @@ var KittySchema = new Schema({
     required: 'Please fill Kitty surname',
     trim: true
   },
+  tag: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  catagory: {
+    type: String,
+    default: '',
+    required: 'Please fill catagory',
+    trim: true
+  },
   created: {
     type: Date,
     default: Date.now

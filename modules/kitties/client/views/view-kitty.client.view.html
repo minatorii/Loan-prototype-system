@@ -3,7 +3,8 @@
     <h1 ng-bind="vm.kitty.name0"></h1>
   </div>
   <div class="page-content">
-    <h5 ng-bind="vm.kitty.name1"></h5>
+    <h5><span ng-bind="vm.kitty.name1"></span> <span class="text-info"> {{vm.kitty.catagory}} </span></h5>
+    <h5>Tags: <strong><span ng-bind="vm.kitty.tag"></span></strong></h5>
   </div>
   <div class="pull-right"
        ng-show="vm.kitty.isCurrentUserOwner">
